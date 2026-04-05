@@ -1,73 +1,93 @@
-# Nikhil Yadav — Portfolio (Next.js)
+# Nikhil Yadav Portfolio
 
-A dark, terminal-aesthetic portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
+This is my personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-## 🚀 Getting Started
+I wanted it to feel clean, animated, and a little different from a typical template site while still being fast and easy to maintain.
 
-### 1. Install dependencies
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Run Locally
+
+1. Install dependencies.
 
 ```bash
 npm install
 ```
 
-### 2. Run the development server
+2. Start the dev server.
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+3. Open http://localhost:3000
 
-### 3. Build for production
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## 🗂 Project Structure
-
-```
-nikhil-portfolio/
-├── app/
-│   ├── globals.css        # Global styles, animations, Tailwind directives
-│   ├── layout.tsx         # Root layout with fonts and metadata
-│   └── page.tsx           # Main page (imports all sections)
-├── components/
-│   ├── Cursor.tsx         # Custom animated cursor
-│   ├── Navbar.tsx         # Fixed navigation bar
-│   ├── Hero.tsx           # Landing hero section
-│   ├── SectionHeader.tsx  # Reusable section header
-│   ├── Projects.tsx       # Projects grid
-│   ├── Skills.tsx         # Skills by category
-│   ├── Education.tsx      # Education & certifications timeline
-│   ├── Achievements.tsx   # Hackathon wins
-│   ├── Contact.tsx        # Contact section
-│   └── Footer.tsx         # Footer
-├── public/                # Static assets
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── next.config.js
-```
-
----
-
-## 🌐 Deploy to Vercel
+## Scripts
 
 ```bash
-npm i -g vercel
-vercel
+npm run dev     # Start development server
+npm run build   # Create production build
+npm run start   # Run production server
+npm run lint    # Run ESLint
 ```
 
-Or push to GitHub and import to [vercel.com](https://vercel.com) — it auto-detects Next.js.
+## Project Structure
 
----
+```text
+app/
+	globals.css
+	layout.tsx
+	page.tsx
 
-## ✏️ Customization
+components/
+	Achievements.tsx
+	Ambient3D.tsx
+	Contact.tsx
+	Cursor.tsx
+	Education.tsx
+	Footer.tsx
+	Hero.tsx
+	Navbar.tsx
+	Projects.tsx
+	SectionHeader.tsx
+	Skills.tsx
+```
 
-- **Colors**: Edit CSS variables in `app/globals.css` or Tailwind theme in `tailwind.config.ts`
-- **Content**: Update data arrays in each component (projects, skills, etc.)
-- **Fonts**: Change `Syne` / `JetBrains Mono` in `app/layout.tsx`
+## Deploy on Vercel
+
+The easiest path is GitHub integration:
+
+1. Push this repository to GitHub.
+2. Import the repo in Vercel.
+3. Vercel auto-detects Next.js and uses the correct defaults.
+4. Deploy.
+
+CLI option:
+
+```bash
+npx vercel
+npx vercel --prod
+```
+
+If the CLI shows a token/auth error, run:
+
+```bash
+vercel login
+```
+
+## Customize Content
+
+- Edit section content directly inside files in `components/`.
+- Update styles in `app/globals.css` and `tailwind.config.ts`.
+- Change metadata and font setup in `app/layout.tsx`.
+
+## Notes
+
+- Keep `package-lock.json` committed for reproducible installs.
+- `.next/`, `.vercel/`, `node_modules/`, and `.env*` are ignored in `.gitignore`.
