@@ -37,28 +37,6 @@ npm run start   # Run production server
 npm run lint    # Run ESLint
 ```
 
-## Project Structure
-
-```text
-app/
-	globals.css
-	layout.tsx
-	page.tsx
-
-components/
-	Achievements.tsx
-	Ambient3D.tsx
-	Contact.tsx
-	Cursor.tsx
-	Education.tsx
-	Footer.tsx
-	Hero.tsx
-	Navbar.tsx
-	Projects.tsx
-	SectionHeader.tsx
-	Skills.tsx
-```
-
 ## Deploy on Vercel
 
 The easiest path is GitHub integration:
